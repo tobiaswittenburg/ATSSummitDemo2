@@ -1,0 +1,42 @@
+{
+  "$ref": "#/definitions/vocabulary",
+  "definitions": {
+    "vocabulary": {
+      "type": "object",
+      "properties": {
+        "word": {
+          "type": "string"
+        },
+        "translation": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "verbs",
+            "adjectives",
+            "nouns",
+            "adverbs"
+          ]
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": [
+            "beginner",
+            "intermediate",
+            "advanced"
+          ]
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "word",
+        "translation"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
